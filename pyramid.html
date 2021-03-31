@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table id="tablee">
+	<tr><td>AAA</td></tr>
+	<tr><td>AAA</td></tr>
+	<tr><td>AAA</td></tr>
+	<tr><td>AAA</td></tr>
+</table>
+<hr>
+<button onclick="add()">add row above</button>
+<button onclick="d()">delete row</button>
+<button onclick="below()">add below</button>
+<button onclick="removeall()">remove all</button>
+<button onclick="border()">add border</button>
+<button onclick="color()">change color</button>
+
+<script type="text/javascript">
+	var tb=document.getElementById("tablee");
+	var r=document.getElementsByTagName('td');
+	function add()
+	{
+		var row=tb.insertRow(0);
+		var cell=row.insertCell();
+		cell.innerHTML="BBB";
+		cell.style.border="1";
+	}
+	function d()
+	{
+		tb.deleteRow(length-1);
+	}
+	function below()
+	{
+		var row=tb.insertRow();
+		var cell=row.insertCell();
+		cell.innerHTML="CCC";
+	}
+	function removeall()
+	{
+		tb.remove();
+	}
+	function border()
+	{
+		
+		  tb.setAttribute("border", "1");
+		
+	}
+	function color()
+	{
+			document.getElementById("tablee").style.color="blue";
+	}
+</script>
+</body>
+</html>
